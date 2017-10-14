@@ -1,47 +1,15 @@
 
-version := "1.0.0-SNAPSHOT"
-organization := "com.actimust"
-scalaVersion := "2.12.3"
-
+organization := "com.lightbend.play"
 name := "play-spring-loader"
-crossPaths := false
 
+playBuildRepoName in ThisBuild := "play-spring-loader"
 
-lazy val root = project in file(".")
+val PlayVersion = "2.6.6"
+val SpringVersion = "4.3.11.RELEASE"
+
+lazy val root = (project in file(".")).enablePlugins(PlayLibrary)
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play" % "2.6.6",
-  "org.springframework" % "spring-context" % "4.3.5.RELEASE"
+  "com.typesafe.play" %% "play" % PlayVersion,
+  "org.springframework" % "spring-context" % SpringVersion
 )
-
-publishMavenStyle := true
-
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
-
-pomIncludeRepository := { _ => false }
-
-pomExtra :=
-  <url>https://github.com/remithieblin/play-spring-loader</url>
-    <licenses>
-      <license>
-        <name>BSD-style</name>
-        <url>http://www.opensource.org/licenses/bsd-license.php</url>
-        <distribution>repo</distribution>
-      </license>
-    </licenses>
-    <scm>
-      <url>git@github.com:remithieblin/play-spring-loader.git</url>
-      <connection>scm:git:git@github.com:remithieblin/play-spring-loader.git</connection>
-    </scm>
-    <developers>
-      <developer>
-        <id>remi.thieblin</id>
-        <name>Remi Thieblibn</name>
-      </developer>
-    </developers>

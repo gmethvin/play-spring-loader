@@ -1,4 +1,4 @@
-package com.actimust.play.spring
+package com.lightbend.play.spring
 
 import org.springframework.beans.MutablePropertyValues
 import org.springframework.beans.factory.config.{ConstructorArgumentValues, BeanDefinition}

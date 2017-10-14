@@ -1,4 +1,4 @@
-package com.actimust.play.spring
+package com.lightbend.play.spring
 
 import java.io.File
 import java.lang.annotation.Annotation

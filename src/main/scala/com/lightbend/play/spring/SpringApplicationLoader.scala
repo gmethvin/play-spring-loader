@@ -1,4 +1,4 @@
-package com.actimust.play.spring
+package com.lightbend.play.spring
 
 import controllers.Assets
 import play.api.ApplicationLoader.Context

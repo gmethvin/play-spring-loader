@@ -7,14 +7,14 @@ The project targets Play 2.6.x
 To use in your Play application project:
 
 1. add the dependency in your build.sbt file: "com.actimust"% "play-spring-loader" % "1.0.0-SNAPSHOT"
-2. configure the loader in the conf file: play.application.loader = "com.actimust.play.spring.SpringApplicationLoader"
+2. configure the loader in the conf file: play.application.loader = "com.lightbend.play.spring.SpringApplicationLoader"
 
 The library is hosted on Sonatype. 
 
 Example config for `scala` based app:
 
 ```sh
-play.application.loader = "com.actimust.play.spring.SpringApplicationLoader"
+play.application.loader = "com.lightbend.play.spring.SpringApplicationLoader"
 
 play.modules.enabled += "com.demo.spring.MyModule"
 
@@ -38,7 +38,7 @@ class AppConfig  {
 Example config for Java based app:
 
 ```sh
-play.application.loader = "com.actimust.play.spring.SpringApplicationLoader"
+play.application.loader = "com.lightbend.play.spring.SpringApplicationLoader"
 
 play.modules.enabled += "com.demo.spring.MyModule"
 
